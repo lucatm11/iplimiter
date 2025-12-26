@@ -34,7 +34,7 @@ public class IpLimiter extends JavaPlugin {
     saveDefaultConfig();
     loadConfiguration();
 
-    if(kickAllPlayersReload == true) {
+    if(kickAllPlayersReload) {
       if(!Bukkit.getOnlinePlayers().isEmpty()) {
         serverReload.onReload();
       }
