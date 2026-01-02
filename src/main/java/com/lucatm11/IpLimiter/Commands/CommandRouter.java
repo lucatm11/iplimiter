@@ -21,7 +21,7 @@ public class CommandRouter implements CommandExecutor {
 
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(args.length != 1 || args.length != 2) {
+        if(args.length == 0 || args.length > 2) {
             return help.onCommand(sender, command, label, args);
         }
 

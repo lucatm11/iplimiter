@@ -45,7 +45,7 @@ public class IpLimiter extends JavaPlugin {
 
   public void loadConfiguration() {
     Configuration configuration = new Configuration();
-    configuration.new Config(getConfig());
-    configuration.new Messages(getConfig());
+    config = configuration.new Config(getConfig());
+    messages = configuration.new Messages(getConfig());
   }
 }
