@@ -75,7 +75,7 @@
 						<relocations>
 							<relocation>
 								<pattern>org.bstats</pattern>
-								<shadedPattern>com.lucatm11.IpLimiter</shadedPattern>
+								<shadedPattern>com.lucatm11.iplimiter</shadedPattern>
 							</relocation>
 						</relocations>
 					</configuration>
