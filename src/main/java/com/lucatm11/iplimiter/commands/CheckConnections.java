@@ -21,26 +21,18 @@ public class CheckConnections implements CommandExecutor {
             return true;
         }
 
-        if (args.length == 1) {
-            sender.sendMessage(ipLimiter.messages.help);
+        Player target = Bukkit.getPlayer(args[1]);
+
+        if (target == null) {
+            sender.sendMessage(ipLimiter.messages.offlinePlayer);
             return true;
         }
 
-        if (args.length == 2) {
-            Player target = Bukkit.getPlayer(args[1]);
+        String ip = target.getAddress().getHostName();
+        Integer connections = ipLimiter.getConnections(ip);
 
-            if (target == null) {
-                sender.sendMessage(ipLimiter.messages.offlinePlayer);
-                return true;
-            }
-
-            String ip = target.getAddress().getHostName();
-            Integer connections = ipLimiter.getConnections(ip);
-
-            sender.sendMessage(ipLimiter.messages.checkConnections.replace("{player}", target.getName())
-                    .replace("{ip}", ip).replace("{connections}", Integer.toString(connections)));
-            return true;
-        }
+        sender.sendMessage(ipLimiter.messages.checkConnections.replace("{player}", target.getName())
+                .replace("{ip}", ip).replace("{connections}", Integer.toString(connections)));
 
         return true;
     }

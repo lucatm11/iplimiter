@@ -22,6 +22,10 @@ public class CommandRouter implements CommandExecutor {
             return help.onCommand(sender, command, label, args);
         }
 
+        if(args.length == 1 && args[0].equalsIgnoreCase("checkconnections")) {
+            return help.onCommand(sender, command, label, args);
+        }
+
         if (args.length > 1 && args[0].equalsIgnoreCase("reload")) {
             return help.onCommand(sender, command, label, args);
         }
