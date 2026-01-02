@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 import com.lucatm11.iplimiter.IpLimiter;
 
-public class CheckConnections implements CommandExecutor{
+public class CheckConnections implements CommandExecutor {
     private final IpLimiter ipLimiter;
 
     public CheckConnections(IpLimiter ipLimiter) {
@@ -16,17 +16,17 @@ public class CheckConnections implements CommandExecutor{
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!sender.hasPermission("iplimiter.checkconnections")) {
+        if (!sender.hasPermission("iplimiter.checkconnections")) {
             sender.sendMessage(ipLimiter.messages.noPermission);
             return true;
         }
 
-        if(args.length == 1) {
+        if (args.length == 1) {
             sender.sendMessage(ipLimiter.messages.help);
             return true;
         }
 
-        if(args.length == 2) {
+        if (args.length == 2) {
             Player target = Bukkit.getPlayer(args[1]);
 
             if (target == null) {
@@ -35,9 +35,10 @@ public class CheckConnections implements CommandExecutor{
             }
 
             String ip = target.getAddress().getHostName();
-            Integer connections = ipLimiter.playersByIP.get(ip);
+            Integer connections = ipLimiter.getConnections(ip);
 
-            sender.sendMessage(ipLimiter.messages.checkConnections.replace("{player}", target.getName()).replace("{ip}", ip).replace("{connections}", Integer.toString(connections)));
+            sender.sendMessage(ipLimiter.messages.checkConnections.replace("{player}", target.getName())
+                    .replace("{ip}", ip).replace("{connections}", Integer.toString(connections)));
             return true;
         }
 

@@ -14,7 +14,7 @@ public class Reload implements CommandExecutor {
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!sender.hasPermission("iplimiter.reload")) {
+        if (!sender.hasPermission("iplimiter.reload")) {
             sender.sendMessage(ipLimiter.messages.noPermission);
             return true;
         }

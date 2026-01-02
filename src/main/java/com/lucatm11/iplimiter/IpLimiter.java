@@ -16,12 +16,29 @@ public class IpLimiter extends JavaPlugin {
   public Configuration.Messages messages;
   public Configuration.Config config;
 
-  public HashMap<String, Integer> playersByIP;
+  private HashMap<String, Integer> playersByIP;
+
+  public void addIPConnection(String ipAddress) {
+    if (getConnections(ipAddress) == null) {
+      playersByIP.put(ipAddress, 1);
+    } else {
+      playersByIP.put(ipAddress, getConnections(ipAddress) + 1);
+    }
+  }
+
+  public void removeIPConnection(String ipAddress) {
+    playersByIP.put(ipAddress, getConnections(ipAddress) - 1);
+  }
+
+  public Integer getConnections(String ipAddress) {
+    return playersByIP.get(ipAddress);
+  }
 
   public void onEnable() {
     saveDefaultConfig();
     loadConfiguration();
 
+    @SuppressWarnings("unused")
     Metrics metrics = new Metrics(this, 28657);
 
     if (config.kickAllPlayersReload) {

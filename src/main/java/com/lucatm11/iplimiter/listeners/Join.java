@@ -18,14 +18,9 @@ public class Join implements Listener {
     public void JoinEvent(AsyncPlayerPreLoginEvent event) {
         String ip = event.getAddress().getHostName();
 
-        if(ipLimiter.playersByIP.get(ip) == null) {
-            ipLimiter.playersByIP.put(ip, 0);
-        }
+        ipLimiter.addIPConnection(ip);
 
-        Integer connections = ipLimiter.playersByIP.get(ip);
-        ipLimiter.playersByIP.put(ip, connections + 1);
-
-        if(connections > ipLimiter.config.maxIpsAllowed) {
+        if (ipLimiter.getConnections(ip) > ipLimiter.config.maxIpsAllowed) {
             event.disallow(Result.KICK_OTHER, ipLimiter.messages.tooManyConnections);
         }
     }

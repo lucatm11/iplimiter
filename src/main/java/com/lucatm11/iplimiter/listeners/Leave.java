@@ -6,7 +6,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 import com.lucatm11.iplimiter.IpLimiter;
 
-public class Leave implements Listener{
+public class Leave implements Listener {
     private final IpLimiter ipLimiter;
 
     public Leave(IpLimiter ipLimiter) {
@@ -16,8 +16,7 @@ public class Leave implements Listener{
     @EventHandler
     public void LeaveEvent(PlayerQuitEvent event) {
         String ip = event.getPlayer().getAddress().getHostName();
-        Integer connections = ipLimiter.playersByIP.get(ip);
 
-        ipLimiter.playersByIP.put(ip, connections - 1);
+        ipLimiter.removeIPConnection(ip);
     }
 }

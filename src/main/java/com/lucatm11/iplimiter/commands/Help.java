@@ -14,7 +14,7 @@ public class Help implements CommandExecutor {
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!sender.hasPermission("iplimiter.help")) {
+        if (!sender.hasPermission("iplimiter.help")) {
             sender.sendMessage(ipLimiter.messages.noPermission);
             return true;
         }
@@ -23,5 +23,5 @@ public class Help implements CommandExecutor {
 
         return true;
     }
-    
+
 }
