@@ -32,7 +32,7 @@ public class IpLimiter extends JavaPlugin {
     }
 
     connection = new Connection();
-    connection.initializeHashMap();
+    connection.initializeMap();
 
     getServer().getPluginManager().registerEvents(new Join(this), this);
     getServer().getPluginManager().registerEvents(new Leave(this), this);

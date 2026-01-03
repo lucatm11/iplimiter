@@ -1,12 +1,13 @@
 package com.lucatm11.iplimiter.utils;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Connection {
-    private HashMap<String, Integer> playersByIP;
+    private Map<String, Integer> playersByIP;
 
-    public void initializeHashMap() {
-        playersByIP = new HashMap<String, Integer>();
+    public void initializeMap() {
+        playersByIP = new HashMap<>();
     }
 
     public void initializeConnection(String ipAddress) {
