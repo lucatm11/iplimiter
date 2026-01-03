@@ -7,7 +7,7 @@
 
 	<groupId>com.lucatm11</groupId>
 	<artifactId>iplimiter</artifactId>
-	<version>B4</version>
+	<version>B5</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
