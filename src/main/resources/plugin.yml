@@ -1,6 +1,6 @@
 name: ConnectionLimiter
 main: com.lucatm11.connectionlimiter.ConnectionLimiter
-version: B5
+version: B6
 commands:
   connectionlimiter:
     description: Main command.

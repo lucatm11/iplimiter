@@ -6,8 +6,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.lucatm11</groupId>
-	<artifactId>connectionlimiter</artifactId>
-	<version>B5</version>
+	<artifactId>ConnectionLimiter</artifactId>
+	<version>B6</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
