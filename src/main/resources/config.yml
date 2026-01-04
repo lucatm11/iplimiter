@@ -2,7 +2,7 @@ max-connections-allowed-per-ip: 2
 kick-all-players-on-server-reload: true # Disabling this may lead to errors.
 
 messages:
-  too-many-connections-kick: "&cYou've reached the maximum number of concurrent connections on this IP!"
+  too-many-connections-kick: "&cYou've reached the limit of simultaneous connections on this IP!"
   no-permission: "&cYou don't have the required permission to use this command!"
   offline-player: "&cThis player is not online."
   plugin-reloaded: "&cPlugin reloaded!"
