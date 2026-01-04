@@ -11,6 +11,7 @@ public class Configuration {
         public final String help;
         public final String pluginReloaded;
         public final String serverReloadKick;
+        public final String incorrectUsage;
 
         public Messages(FileConfiguration config) {
             noPermission = Utils.colorize(config.getString("messages.no-permission"));
@@ -20,6 +21,7 @@ public class Configuration {
             help = Utils.colorize(config.getString("messages.help"));
             pluginReloaded = Utils.colorize(config.getString("messages.plugin-reloaded"));
             serverReloadKick = Utils.colorize(config.getString("messages.server-reload-kick"));
+            incorrectUsage= Utils.colorize(config.getString("messages.incorrect-usage"));
         }
     }
 
