@@ -42,7 +42,8 @@ public class CommandRouter implements CommandExecutor {
                 return reload.onCommand(sender, command, label, args);
 
             default:
-                return help.onCommand(sender, command, label, args);
+                sender.sendMessage(plugin.messages.incorrectCommand);
+                return true;
         }
     }
 }

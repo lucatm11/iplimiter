@@ -13,6 +13,7 @@ public class Configurations {
         public final String pluginReloaded;
         public final String serverReloadKick;
         public final String incorrectUsage;
+        public final String incorrectCommand;
 
         public Messages(YamlConfiguration config) {
             noPermission = Utils.colorize(config.getString("no-permission"));
@@ -23,6 +24,7 @@ public class Configurations {
             pluginReloaded = Utils.colorize(config.getString("plugin-reloaded"));
             serverReloadKick = Utils.colorize(config.getString("server-reload-kick"));
             incorrectUsage = Utils.colorize(config.getString("incorrect-usage"));
+            incorrectCommand = Utils.colorize(config.getString("incorrect-command"));
         }
     }
 

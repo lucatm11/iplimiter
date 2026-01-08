@@ -2,6 +2,7 @@ too-many-connections-kick: "&cYou've reached the limit of simultaneous connectio
 no-permission: "&cYou don't have the required permission to use this command!"
 offline-player: "&cThis player is not online."
 incorrect-usage: "&cIncorrect usage! Use &7/connectionlimiter &cfor help."
+incorrect-command: "&cIncorrect command! Use &7/connectionlimiter &cfor help."
 plugin-reloaded: "&cPlugin reloaded!"
 server-reload-kick: "&cReloading server!"
 checkconnections: |
