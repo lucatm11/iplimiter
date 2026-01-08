@@ -16,7 +16,7 @@ public class Join implements Listener {
     }
 
     @EventHandler
-    public void onPreLogin(PlayerLoginEvent event) {
+    public void onLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
         String ip = event.getAddress().getHostName();
 
