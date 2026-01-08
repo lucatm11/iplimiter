@@ -22,7 +22,7 @@ public class Join implements Listener {
 
         plugin.connection.initializeConnection(ip);
 
-        if (plugin.connection.getConnections(ip) >= plugin.config.maxConnectionsAllowedPerIp) {
+        if (plugin.connection.getConnections(ip) >= plugin.settings.maxConnectionsAllowedPerIp) {
             if(!player.hasPermission("connectionlimiter.bypass")) {
                 event.disallow(Result.KICK_OTHER, plugin.messages.tooManyConnections);
             }

@@ -1,0 +1,14 @@
+too-many-connections-kick: "&cYou've reached the limit of simultaneous connections on this IP!"
+no-permission: "&cYou don't have the required permission to use this command!"
+offline-player: "&cThis player is not online."
+incorrect-usage: "&cIncorrect usage! Use &7/connectionlimiter &cfor help."
+plugin-reloaded: "&cPlugin reloaded!"
+server-reload-kick: "&cReloading server!"
+checkconnections: |
+  &7-------&c{player}&7-------
+  &cIP Address: &7{ip}
+  &cActive connections: &7{connections}
+help: |
+  &c/connectionlimiter - &7Show help (this screen).
+  &c/connectionlimiter reload - &7Reload the configuration of the plugin.
+  &c/connectionlimiter checkconnections <player> - &7Checks the active connections of a user.
