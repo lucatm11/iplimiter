@@ -1,6 +1,5 @@
 package com.lucatm11.connectionlimiter.listeners;
 
-import com.lucatm11.connectionlimiter.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
