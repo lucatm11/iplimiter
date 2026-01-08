@@ -11,5 +11,7 @@ permissions:
     description: Allows the player to check the active connections of another player.
   connectionlimiter.reload:
     description: Allows the player to reload the configuration file of the plugin.
-  connectionlimiter.bypass:
+  connectionlimiter.exempt:
     description: Lets the player join the server even if the limit of simultaneous connections has been reached.
+  connectionlimiter.notify:
+    description: Notify the player if a player reached the limit of simultaneous connections and attempted to join.
