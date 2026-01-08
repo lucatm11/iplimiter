@@ -31,14 +31,16 @@ public class Configurations {
     public class Settings {
         public final Integer maxConnectionsAllowedPerIp;
         public final Boolean kickAllPlayersOnServerReload;
-        public final Boolean customPunishmentEnable;
-        public final String customPunishmentCommand;
+        public final Boolean punishmentEnabled;
+        public final String punishmentCommand;
+        public final Boolean punishmentDisallowEntry;
 
         public Settings(YamlConfiguration config) {
             maxConnectionsAllowedPerIp = config.getInt("general.max-connections-allowed-per-ip");
             kickAllPlayersOnServerReload = config.getBoolean("general.kick-all-players-on-server-reload");
-            customPunishmentEnable = config.getBoolean("general.custom-punishment.enable");
-            customPunishmentCommand = config.getString("general.custom-punishment.command");
+            punishmentEnabled = config.getBoolean("general.punishment.enable");
+            punishmentCommand = config.getString("general.punishment.command");
+            punishmentDisallowEntry = config.getBoolean("general.punishment.disallow-entry");
         }
     }
 }

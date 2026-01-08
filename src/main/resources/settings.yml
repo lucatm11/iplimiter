@@ -1,9 +1,10 @@
 general:
   max-connections-allowed-per-ip: 2
   kick-all-players-on-server-reload: true # Disabling this may lead to errors.
-  custom-punishment:
+  punishment: # Beware! Runs on each join.
     enable: false
-    command: kick {player}
+    command: warn {player}
+    disallow-entry: true
 alerts:
   enable: true
   censor-ip: true
